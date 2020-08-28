@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id 'java'
+    id 'war'
+}
+
+group 'ru.rtmis.melfor'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.3.3.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.3.3.RELEASE'
+    implementation 'org.springframework.kafka:spring-kafka:2.5.5.RELEASE'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+    testCompileOnly 'org.projectlombok:lombok:1.18.12'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:2.3.3.RELEASE'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.3.RELEASE'
+    testImplementation 'org.springframework.kafka:spring-kafka-test:2.5.5.RELEASE'
+    testCompile 'junit:junit:4.12'
+}

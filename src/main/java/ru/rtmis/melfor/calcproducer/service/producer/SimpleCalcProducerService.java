@@ -26,7 +26,7 @@ public class SimpleCalcProducerService implements CalcProducerService {
     public void produce() {
         String topic = randomTopicService.generate();
         CalcDto dto = calcDtoGenerationService.generate();
-        log.info("<= sending {} to " + topic, writeValueAsString(dto));
+        log.info("<= sending {} to {}", writeValueAsString(dto), topic);
         kafkaCalcTemplate.send(topic, dto);
     }
 
